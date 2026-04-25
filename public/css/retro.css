@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Monocraft';
+    src: url('/fonts/Monocraft.ttf') format('truetype');
+}
+
+/* ── GLOBAL ── */
+* {
+    font-family: 'Monocraft', monospace !important;
+    font-size: 11px !important;
+    border-radius: 0px !important;
+}
+
+body, html,
+.fi-body, .fi-layout, .fi-main, .fi-simple-layout {
+    background-color: #0A0A12 !important;
+    overflow: visible !important;
+}
+
+/* ── SIDEBAR ── */
+.fi-sidebar {
+    background-color: #0D0D1A !important;
+    border-right: 1px solid #4444AA !important;
+}
+
+.fi-sidebar *,
+.fi-sidebar-nav-item * {
+    background-color: transparent !important;
+    color: #8888FF !important;
+}
+
+.fi-sidebar-nav-item a {
+    letter-spacing: 2px !important;
+}
+
+.fi-sidebar-nav-item a:hover,
+.fi-sidebar-nav-item-active a,
+.fi-sidebar-nav-item a[aria-current="page"] {
+    background-color: #1A1A3A !important;
+    color: #CCCCFF !important;
+    border-left: 2px solid #8888FF !important;
+}
+
+/* Spitzhacke vor Verwaltung */
+.fi-sidebar-item-btn[href*="gear-items"]::before {
+    content: "⛏\00a0" !important;
+    font-size: 14px !important;
+}
+
+/* ── HEADER ── */
+.fi-topbar {
+    background-color: #0D0D1A !important;
+    border-bottom: 1px solid #4444AA !important;
+}
+
+.fi-topbar * {
+    color: #8888FF !important;
+}
+
+/* ── ÜBERSCHRIFT ── */
+.fi-header-heading {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+}
+
+/* ── TEXT ALLGEMEIN ── */
+.fi-main * {
+    color: #AAAAEE !important;
+}
+
+/* ── STATS WIDGETS ── */
+.fi-wi-stats-overview {
+    padding: 48px !important;
+    margin: 32px !important;
+    overflow: visible !important;
+}
+
+.fi-wi-stats-overview-stats-ctn {
+    gap: clamp(8px, 2vw, 48px) !important;
+    padding: 16px !important;
+    overflow: visible !important;
+}
+
+.fi-wi-stats-overview-stat {
+    background-color: #0D0D1A !important;
+    border: 1px solid #8888FF !important;
+    box-shadow: 6px 6px 0px #4444AA !important;
+    padding: 32px !important;
+    margin: 8px !important;
+    overflow: visible !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+    min-width: 180px !important;
+    word-break: break-word !important;
+}
+
+.fi-wi-stats-overview-stat:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 8px 8px 0px #8888FF !important;
+    border-color: #CCCCFF !important;
+    cursor: pointer !important;
+}
+
+.fi-wi-stats-overview-stat-value {
+    font-size: clamp(16px, 3vw, 32px) !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+}
+
+.fi-wi-stats-overview-stat-label {
+    font-size: clamp(9px, 1.5vw, 13px) !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    word-break: break-word !important;
+}
+
+/* ── SECTION CONTAINER ── */
+.fi-section {
+    background-color: #0D0D1A !important;
+    border: 1px solid #4444AA !important;
+    padding: 32px !important;
+    margin: 32px 48px 32px 32px !important;
+}
+
+/* ── TABELLE ── */
+.fi-ta-ctn, .fi-ta-header, .fi-ta-footer,
+table, thead, tbody, tr, th, td {
+    background-color: #0D0D1A !important;
+    color: #AAAAEE !important;
+    border-color: #4444AA !important;
+}
+
+.fi-ta-row:hover td {
+    background-color: #1A1A3A !important;
+}
+
+/* ── SEARCH ── */
+.fi-ta-search input,
+.fi-ta-search button,
+.fi-ta-search svg,
+.fi-ta-search-field,
+.fi-ta-search-field * {
+    background-color: #0A0A12 !important;
+    color: #8888FF !important;
+    border-color: #4444AA !important;
+}
+
+/* ── BUTTONS ── */
+.fi-btn {
+    background-color: #0D0D1A !important;
+    color: #8888FF !important;
+    border: 1px solid #4444AA !important;
+}
+
+.fi-btn:hover {
+    background-color: #1A1A3A !important;
+    color: #CCCCFF !important;
+    box-shadow: 0 0 10px rgba(100, 100, 255, 0.4) !important;
+}
+
+/* ── CARDS ── */
+.fi-card {
+    background-color: #0D0D1A !important;
+    border: 1px solid #4444AA !important;
+}
+
+/* ── INPUTS ── */
+input, select, textarea {
+    background-color: #0A0A12 !important;
+    color: #8888FF !important;
+    border: 1px solid #4444AA !important;
+}
+
+select option {
+    background-color: #0D0D1A !important;
+    color: #8888FF !important;
+}
+
+/* ── SVG ICONS ── */
+svg {
+    color: #8888FF !important;
+    fill: #8888FF !important;
+}
+
+/* ── WIDGET WRAPPER ── */
+.fi-wi {
+    overflow: visible !important;
+    padding: 8px !important;
+}
+
+/* ── PAGINATION ── */
+.fi-pagination,
+.fi-pagination *,
+.fi-pagination-select,
+.fi-input,
+.fi-input * {
+    background-color: #0A0A12 !important;
+    color: #8888FF !important;
+    border-color: #4444AA !important;
+}
+
+/* ── FOKUS FARBE ── */
+*:focus {
+    outline-color: #4444AA !important;
+    --tw-ring-color: #4444AA !important;
+    border-color: #4444AA !important;
+}
+/* Gelber Fokus fixen */
+*:focus {
+    outline: 1px solid #4444AA !important;
+    box-shadow: 0 0 0 1px #4444AA !important;
+}
+
+/* Obere weiße Linie */
+.fi-ta-header-toolbar {
+    border-bottom: 1px solid #2A2A5A !important;
+}
+
+/* Alle möglichen Fokus Farben überschreiben */
+*:focus,
+*:focus-visible,
+*:focus-within {
+    outline: 1px solid #4444AA !important;
+    --tw-ring-color: rgba(68, 68, 170, 1) !important;
+    --tw-ring-shadow: 0 0 0 1px rgba(68, 68, 170, 1) !important;
+    --tw-ring-offset-shadow: 0 0 0 0 rgba(68, 68, 170, 1) !important;
+    box-shadow: 0 0 0 1px #4444AA !important;
+}
