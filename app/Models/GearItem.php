@@ -13,6 +13,7 @@ class GearItem extends Model
         'purchase_date',
         'value',
         'notes',
+        'image',
     ];
     public function getConditionLabelAttribute(): string
     {

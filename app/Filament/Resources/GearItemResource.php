@@ -8,9 +8,12 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Placeholder;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 
 class GearItemResource extends Resource
@@ -53,6 +56,24 @@ class GearItemResource extends Resource
             Textarea::make('notes')
                 ->label('Notizen')
                 ->nullable(),
+
+            FileUpload::make('image')
+                ->label('Bild')
+                ->image()
+                ->disk('public')
+                ->directory('gear-images')
+                ->fetchFileInformation(false)
+                ->nullable()
+                ->hiddenOn('view'),
+
+            Placeholder::make('image_preview')
+                ->label('Bild')
+                ->content(fn ($record) => $record?->image
+                    ? new \Illuminate\Support\HtmlString(
+                        '<img src="/storage/' . e($record->image) . '" style="height:200px;object-fit:cover;object-position:center top;">'
+                    )
+                    : '')
+                ->visibleOn('view'),
         ]);
     }
 
@@ -60,6 +81,11 @@ class GearItemResource extends Resource
     {
         return $table
             ->columns([
+                ImageColumn::make('image')
+                    ->label('Bild')
+                    ->square()
+                    ->defaultImageUrl(null),
+
                 Tables\Columns\TextColumn::make('name')
                     ->label('Name')
                     ->searchable(),

@@ -10,6 +10,11 @@ class ViewGearItem extends ViewRecord
 {
     protected static string $resource = GearItemResource::class;
 
+    public function getTitle(): string|\Illuminate\Contracts\Support\Htmlable
+    {
+        return $this->record->name;
+    }
+
     protected function getHeaderActions(): array
     {
         return [

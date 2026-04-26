@@ -156,7 +156,11 @@
         <div class="grid">
             @foreach($gearItems as $item)
             <a href="/gear-manager/gear-items/{{ $item->id }}" class="card">
+                @if($item->image)
+                <img src="/storage/{{ $item->image }}" alt="" style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;">
+                @else
                 <div class="card-category">{{ $item->category }}</div>
+                @endif
                 <div class="card-body">
                     <div class="card-name">{{ $item->name }}</div>
                     <div class="card-value">€ {{ number_format($item->value, 2, ',', '.') }}</div>
