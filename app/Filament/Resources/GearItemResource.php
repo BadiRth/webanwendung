@@ -22,6 +22,7 @@ class GearItemResource extends Resource
     protected static ?string $label = 'Verwaltung';
     protected static ?string $pluralLabel = 'Verwaltung';
     protected static ?int $navigationSort = 3;
+    protected static ?string $createButtonLabel = 'Neu anlegen';
 
     public static function form(Schema $schema): Schema
     {
