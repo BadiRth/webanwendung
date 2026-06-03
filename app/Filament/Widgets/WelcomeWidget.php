@@ -9,4 +9,5 @@ class WelcomeWidget extends Widget
     protected string $view = 'filament.widgets.welcome-widget';
     protected static ?int $sort = 1;
     protected int | string | array $columnSpan = 'full';
+    protected static int $columns = 1;
 }

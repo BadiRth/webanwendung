@@ -216,6 +216,9 @@ svg {
     border-bottom: 1px solid #2A2A5A !important;
 }
 
+/* ── WELCOME WIDGET FULL WIDTH ── */
+.fi-wi-stats-overview, .fi-sc-has-gap, .fi-grid { grid-column: 1 / -1 !important; }
+
 /* Alle möglichen Fokus Farben überschreiben */
 *:focus,
 *:focus-visible,
